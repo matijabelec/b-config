@@ -9,11 +9,13 @@
 #define READER_H
 
 #include <fstream>
+#include "config_tree.h"
 
 namespace bcfg {
 
 class reader {
     private:
+        bcfg::config_tree m_tree;
         
     public:
         reader();

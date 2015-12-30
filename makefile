@@ -7,7 +7,8 @@ INCLUDES=
 LDFLAGS=
 
 SOURCES=main.cpp \
-include/reader.cpp
+include/reader.cpp \
+include/config_tree.cpp
 
 OBJECTS=$(SOURCES:.cpp=.o)
 

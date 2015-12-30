@@ -24,12 +24,20 @@ int reader::load_from_file(const char* filename) {
         return -1;
     
     std::string line;
+    std::string name;
+    std::string value;
+    
     while(1) {
         getline(fs, line);
         if(fs.eof() )
             break;
         
-        //TODO: save configuration option
+        //TODO: get name and value from line
+        
+        // try to insert configuration option
+        if(m_tree.insert(name, value) ) {
+            return -1;
+        }
     }
     fs.close();
     
