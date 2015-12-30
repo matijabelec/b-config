@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+
+# NB project directory
+nbproject/
+build/
+dist/
