@@ -15,16 +15,15 @@ config_tree::config_tree() {
 config_tree::~config_tree() {
 }
 
-int config_tree::insert(std::string name, std::string value) {
-    //TODO: implement
-    
-    return 0;
+void config_tree::insert(std::string name, std::string value) {
+    m_options[name] = value;
 }
 
 int config_tree::remove(std::string name) {
-    //TODO: implement
+    if(m_options.erase(name) )
+        return 0;
     
-    return 0;
+    return -1;
 }
 
 } // namespace bcfg
