@@ -7,9 +7,12 @@
 
 #include <iostream>
 #include "include/reader.h"
+#include "include/writer.h"
 using namespace std;
 
 int main() {
+    
+    bcfg::writer the_writer;
     
     bcfg::reader the_reader;
     if(the_reader.load_from_file("test.conf") ) {

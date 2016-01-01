@@ -8,6 +8,7 @@ LDFLAGS=
 
 SOURCES=main.cpp \
 include/reader.cpp \
+include/writer.cpp \
 include/config_tree.cpp
 
 OBJECTS=$(SOURCES:.cpp=.o)
