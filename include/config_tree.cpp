@@ -15,8 +15,10 @@ config_tree::config_tree() {
 config_tree::~config_tree() {
 }
 
-void config_tree::insert(std::string name, std::string value) {
+int config_tree::insert(std::string name, std::string value) {
     m_options[name] = value;
+    
+    return 0;
 }
 
 int config_tree::remove(std::string name) {

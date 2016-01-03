@@ -17,7 +17,7 @@ reader::~reader() {
     //TODO: implement
 }
 
-int reader::load_from_file(const char* filename) {
+int reader::load_from_file(const char* filename, bcfg::config_tree& configs) {
     std::ifstream fs(filename);
     
     if(!fs.is_open() )
@@ -35,7 +35,7 @@ int reader::load_from_file(const char* filename) {
         //TODO: get name and value from line
         
         // try to insert configuration option
-        if(m_tree.insert(name, value) ) {
+        if(configs.insert(name, value) ) {
             return -1;
         }
     }

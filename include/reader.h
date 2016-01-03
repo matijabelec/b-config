@@ -14,9 +14,6 @@
 namespace bcfg {
 
 class reader {
-    private:
-        bcfg::config_tree m_tree;
-        
     public:
         reader();
         virtual ~reader();
@@ -24,10 +21,11 @@ class reader {
         /**
          * used to load configuration options from file
          * 
-         * @param filename   as configuration file
+         * @param filename  as configuration file
+         * @param configs   object used to fill with loaded keys
          * @return integer  returns 0 if no error, otherwise returns error id
          */
-        int load_from_file(const char* filename);
+        int load_from_file(const char* filename, bcfg::config_tree& configs);
         
 };
 

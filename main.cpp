@@ -12,10 +12,12 @@ using namespace std;
 
 int main() {
     
-    bcfg::writer the_writer;
+    bcfg::config_tree configs;
     
+    bcfg::writer the_writer;
     bcfg::reader the_reader;
-    if(the_reader.load_from_file("test.conf") ) {
+    
+    if(the_reader.load_from_file("test.conf", configs) ) {
         std::cerr << "error with loading configuration from file" << std::endl;
     } else {
         std::clog << "configuration loaded successfully" << std::endl;

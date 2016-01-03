@@ -25,8 +25,9 @@ class config_tree {
          * 
          * @param name      name of option to insert
          * @param value     value for option to insert
+         * @return integer  returns 0 if no errors
          */
-        void insert(std::string name, std::string value);
+        int insert(std::string name, std::string value);
         
         /**
          * remove option from options by name
